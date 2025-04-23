@@ -73,7 +73,7 @@ export default function Hero() {
         {/* Download Resume */}
         <div className="mt-6">
           <a
-            href="/assets/Su_Myat_Phyu_Resume.pdf"
+            href="/assets/SuMyatPhyuResume.pdf"
             download
             className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition"
           >
