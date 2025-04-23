@@ -1,32 +1,35 @@
 import { useState, useEffect } from "react";
-import mylogo from "/assets/my_logo.png"; // Make sure this is in your `public/assets/`
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Scroll effect for background color
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 pb-10 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
-        {/* Logo */}
-        <a href="/" className="text-white text-2xl font-bold tracking-wide flex items-center gap-2">
-          <img src={mylogo} alt="My Logo" className="w-20 h-10" />
-          
-        </a>
+      <div className="container mx-auto flex justify-between items-center px-6 py-3">
+        {/* Animated Text Logo */}
+        <motion.a
+          href="/"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="text-white text-2xl font-bold font-montserrat tracking-widest hover:text-blue-400 transition"
+        >
+          SU MYAT PHYU
+        </motion.a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
