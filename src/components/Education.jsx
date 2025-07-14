@@ -5,14 +5,14 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 export default function Education() {
   const educationData = [
     {
-      year: "2023",
-      degree: "Foundation Diploma in Software Engineering",
+      year: "2024-Present",
+      degree: "Higher National Diploma in Computing",
       institute: "EduClaaS Academy | Lithan",
       field: "Computer Science",
     },
     {
-      year: "2024-Present",
-      degree: "Higher National Diploma in Computing",
+      year: "2023",
+      degree: "Foundation Diploma in Software Engineering",
       institute: "EduClaaS Academy | Lithan",
       field: "Computer Science",
     },
